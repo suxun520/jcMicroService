@@ -69,6 +69,27 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<!-- 能读到配置文件信息 -->
+	<build>
+		<finalName>microservicecloud</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<delimiters>
+						<delimit>$</delimit>
+					</delimiters>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 
 	<modules>
