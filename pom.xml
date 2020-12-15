@@ -97,5 +97,7 @@
 		<module>jcMicroService-dept-provider-8001</module>
 		<module>jcMiccroService-dept-consumer-80</module>
 		<module>jcMicroService-eureka-7001</module>
+		<module>jcMicroService-eureka-7002</module>
+		<module>jcMicroService-eureka-7003</module>
 	</modules>
 </project>
