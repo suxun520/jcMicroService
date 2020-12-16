@@ -54,7 +54,7 @@ public class DeptController {
 			hashMap.put("port", serviceInstance.getPort());
 			hashMap.put("uri", serviceInstance.getUri());
 		}
-		return hashMap;
+		return client;
 	}
 
 }

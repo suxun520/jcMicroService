@@ -44,17 +44,17 @@ public class DeptController {
 		HashMap<String, Object> hashMap = new HashMap<String, Object>();
 		List<String> services = client.getServices(); // 这个就是微服务spring.application.name值
 		hashMap.put("serviceList", services);
-     
 		System.out.println(services);
 		
-		List<ServiceInstance> instances = client.getInstances(services.get(0));
+		List<ServiceInstance> instances = client.getInstances("MICROSERVICECLOUD-DEPT");
 		for (ServiceInstance serviceInstance : instances) {
 			hashMap.put("ServiceId", serviceInstance.getServiceId());
 			hashMap.put("host", serviceInstance.getHost());
 			hashMap.put("port", serviceInstance.getPort());
 			hashMap.put("uri", serviceInstance.getUri());
 		}
-		return hashMap;
+		System.out.println(hashMap);
+		return client;
 	}
 
 }
