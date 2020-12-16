@@ -14,7 +14,8 @@ import cn.ncu.entity.Dept;
 public class DeptConsumer80Controller {
 	  
 	
-	private   static  final  String  REST_URL_PREFIX="http://localhost:8001";
+//	private   static  final  String  REST_URL_PREFIX="http://localhost:8001";
+	private   static  final  String  REST_URL_PREFIX="http://MICROSERVICECLOUD-DEPT";   //根据eureka服务器访问微服务
 	
 	@Autowired
 	private  RestTemplate  restTemplate;
