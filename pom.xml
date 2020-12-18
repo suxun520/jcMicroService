@@ -101,5 +101,6 @@
 		<module>jcMicroService-eureka-7003</module>
 		<module>jcMicroService-dept-provider-8002</module>
 		<module>jcMicroService-dept-provider-8003</module>
+		<module>jcMiccroService-dept-consumer-feign</module>
 	</modules>
 </project>
