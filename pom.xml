@@ -103,5 +103,7 @@
 		<module>jcMicroService-dept-provider-8003</module>
 		<module>jcMiccroService-dept-consumer-feign</module>
 		<module>jcMicroService-dept-hystrix-provider-8001</module>
+		<module>jcMiccroService-consumer-dashboard-9001</module>
+		<module>jcMicroService-myzuul-9527</module>
 	</modules>
 </project>

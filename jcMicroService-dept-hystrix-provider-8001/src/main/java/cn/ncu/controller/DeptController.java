@@ -1,5 +1,8 @@
 package cn.ncu.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,10 +29,23 @@ public class DeptController {
 			return dept;
 		}
 	}
+	
+	
   //这样写有个问题  一个方法对应一个异常方法  会造成方法冗余 不符合aop思想  所以需要改进
 	//改进方法  在api 接口层  注解加个参数  fallbackFactiry  参数是类  该类实现fallbackFactory   要在feign工程开启hystrix
 	public Dept getDeptByIdFallback(@PathVariable("id") Long id) {
 		return new  Dept().setDeptno(id).setDname("exception process").setDb_source("no  available   datasource");
+	}
+	
+	public   List<Dept> getDeptListFallback(){
+		return  new   ArrayList<Dept>();
+	}
+	
+	
+	@RequestMapping(value = "/dept/list", method = RequestMethod.GET)
+	@HystrixCommand(fallbackMethod = "getDeptListFallback") 
+	public List<Dept> list() {
+		return service.list();
 	}
 
 }
