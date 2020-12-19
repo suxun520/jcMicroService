@@ -102,5 +102,6 @@
 		<module>jcMicroService-dept-provider-8002</module>
 		<module>jcMicroService-dept-provider-8003</module>
 		<module>jcMiccroService-dept-consumer-feign</module>
+		<module>jcMicroService-dept-hystrix-provider-8001</module>
 	</modules>
 </project>

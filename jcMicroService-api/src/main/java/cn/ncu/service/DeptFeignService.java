@@ -16,7 +16,7 @@ import cn.ncu.entity.Dept;
 * @author 经成  
 * @date 2020年12月18日 下午4:12:02  
 */  
-@FeignClient("MICROSERVICECLOUD-DEPT")
+@FeignClient(value = "MICROSERVICECLOUD-DEPT",fallbackFactory = DeptServiceFallbackFactory.class)
 public interface DeptFeignService {
    
 	
