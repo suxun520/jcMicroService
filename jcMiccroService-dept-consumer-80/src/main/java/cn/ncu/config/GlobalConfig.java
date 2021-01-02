@@ -17,7 +17,7 @@ public class GlobalConfig {
 		return  new  RestTemplate();
 	}
 	
-	@Bean    //ribbon自带7中负载均衡算法  
+	//@Bean    //ribbon自带7中负载均衡算法  
 	public   IRule   myRule() {
 		return  new  RandomRule();
 	}
